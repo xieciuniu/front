@@ -1,0 +1,108 @@
+.doctor-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: 200px;
+}
+.doctor-container img{
+    border-radius: 150px;
+}
+.doctor-container h3{
+    text-transform: uppercase;
+}
+.doctor-container p{
+    color: white;
+}
+.calendar-container h3{
+    color: white;
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+}
+.calendar{
+    margin: 0 auto;
+    max-width: 90%;
+    color: white;
+    font-family: 'Roboto',sans-serif;
+}
+.month{
+    background-color: #f7d9d4cc;
+    margin-top: 20px;
+    color: black;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.month img{
+    height: 30px;
+    width: max-content;
+    margin: 2px 4px;
+
+}
+.month strong{
+    padding: 3px;
+  
+}
+.calendar-table {
+    width: 100%;
+}
+.calendar-table-row th{
+    font-weight: 400;
+    font-size: 16px;
+    background: #eff7f3;
+    color: black;
+    opacity: 0.85;
+    height: 35px;
+    width: 20vh;
+
+
+}
+.calendar-table-row th span{
+    margin-right: 5px;
+    
+}
+
+.calendar-table-row td{
+    background-color: #d9d9d9ab;
+    height: 40px;
+    padding: 3px auto;
+}
+.calendar-table-row button{
+    width: 70%;
+    margin: 2px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #f7d9d4cc;
+    font-weight: 700;
+    text-transform: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.continue-btn a{
+    text-decoration: none;
+    color: white;
+}
+.calendar-table-row td button:hover{
+    background-color: #f7d9d4cc;
+}
+.calendar-table-row td button:active{
+    background-color: #02BC7D;
+    border-color: #02BC7D;
+    color: white;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalndarz wizyt</title>
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="stylesheet" href="./calendar.css" type="text/css" />
+    <link rel="stylesheet" href="./price-container.css" type="text/css" />
+    <link href="./mobiscroll.javascript.min.css" rel="stylesheet" />
+    <script src="./mobiscroll.javascript.min.js"></script>
+
+  </head>
+  <body>
+    <div class="nav-bar">
+      <nav>
+        <a href="./main-page.html"><img id="logo" src="../images/logo1.jpg" alt="" srcset="" /></a>
+        <ul>
+          <li><a href="#">Strona główna</a></li>
+          <li><a href="#">O nas</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Moje konto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main-container">
+      <div class="doctor-container">
+        <h3>Twój lekarz</h3>
+        <img id="lekarzimg" src="img" alt="" />        
+        <p class="doctor-name" id="doctor-name" >hejka</p>
+        
+        <script>
+          const lekarz = localStorage.getItem("lek");
+          document.getElementById("lekarzimg").src=`../images/${lekarz}.jpg`;
+          
+          const imie = localStorage.getItem("imie");
+          document.getElementById('doctor-name').innerText = imie;
+          
+        </script>
+
+
+
+        <hr
+          style="background: #f66f56; width: 100%; height: 0.1rem; border: 0px"
+        />
+      </div>
+      <div class="calendar-container">
+        <h3>Wybierz termin swojej wizyty</h3>
+        <div class="calendar">
+          <div class="month">
+            <img src="../images/left-arrow.png" alt="" />
+            <div class="calendar-text">
+              <strong>LISTOPAD</strong>
+              <strong>2022</strong>
+            </div>
+
+            <img src="../images/right-arrow (2).png" alt="" />
+          </div>
+          <table class="calendar-table">
+            <tr class="calendar-table-row">
+              <th><span>Pn</span>22.11</th>
+              <th><span>Wt</span> 23.11</th>
+              <th><span>Śr</span> 24.11</th>
+              <th><span>Czw </span>25.11</th>
+              <th><span>Pt</span> 26.11</th>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>8.00-9.00</button></td>
+              <td><button>8.00-9.00</button></td>
+              <td><button>8.00-9.00</button></td>
+              <td><button>8.00-9.00</button></td>
+              <td><button>8.00-9.00</button></td>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>9.00-10.00</button></td>
+              <td><button>9.00-10.00</button></td>
+              <td><button>9.00-10.00</button></td>
+              <td><button>9.00-10.00</button></td>
+              <td><button>9.00-10.00</button></td>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>10.00-11.00</button></td>
+              <td><button>10.00-11.00</button></td>
+              <td><button>10.00-11.00</button></td>
+              <td><button>10.00-11.00</button></td>
+              <td><button>10.00-11.00</button></td>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>11.00-12.00</button></td>
+              <td><button>11.00-12.00</button></td>
+              <td><button>11.00-12.00</button></td>
+              <td><button>11.00-12.00</button></td>
+              <td><button>11.00-12.00</button></td>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>12.00-13.00</button></td>
+              <td><button>12.00-13.00</button></td>
+              <td><button>12.00-13.00</button></td>
+              <td><button>12.00-13.00</button></td>
+              <td><button>12.00-13.00</button></td>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>13.00-14.00</button></td>
+              <td><button>13.00-14.00</button></td>
+              <td><button>13.00-14.00</button></td>
+              <td><button>13.00-14.00</button></td>
+              <td><button>13.00-14.00</button></td>
+            </tr>
+            <tr class="calendar-table-row">
+              <td><button>14.00-15.00</button></td>
+              <td><button>14.00-15.00</button></td>
+              <td><button>14.00-15.00</button></td>
+              <td><button>14.00-15.00</button></td>
+              <td><button>14.00-15.00</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="price-container">
+        <h3>Wybierz cel swojej wizyty</h3>
+        <table class="price-table" id="tabelatest">
+          <tr class="price-table-header">
+            <td>Cel</td>
+            <td>Cena</td>
+          </tr>
+          <tr class="price-table-row">
+            <td>Wizyta kontrolna</td>
+            <td class="price-table-row-btn">200 zł<button id="btn1" onclick="price(1,'200 zł','Wizyta kontrolna')">Wybierz</button></td>
+          </tr>
+          <tr class="price-table-row">
+            <td>Konsultacja</td>
+            <td class="price-table-row-btn">100 zł<button id="btn2" onclick="price(2,'100 zł','Konsultacja')">Wybierz</button></td>
+          </tr>
+          <tr class="price-table-row">
+            <td>Choroba</td>
+            <td class="price-table-row-btn">250 zł<button id="btn3" onclick="price(3,'250 zł','choroba')">Wybierz</button></td>
+          </tr>
+          <tr class="price-table-row">
+            <td>Szczepienie</td>
+            <td class="price-table-row-btn">150 zł<button id="btn4" onclick="price(4,'150 zł','Szczepienie')">Wybierz</button></td>
+          </tr>
+          <tr class="price-table-row">
+            <td>Wypisanie recepty</td>
+            <td class="price-table-row-btn">50 zł<button id="btn5" onclick="price(5,'50 zł', 'Wypisanie recepty')">Wybierz</button></td>
+          </tr>
+        </table>
+      </div>
+      <script>
+        function price(numer, koszt, cel){
+          document.getElementById("btn1").style.backgroundColor = '#f66f56';
+          document.getElementById("btn2").style.backgroundColor = '#f66f56';
+          document.getElementById("btn3").style.backgroundColor = '#f66f56';
+          document.getElementById("btn4").style.backgroundColor = '#f66f56';
+          document.getElementById("btn5").style.backgroundColor = '#f66f56';
+          const btn = "btn"+numer;
+          localStorage.setItem("btn", btn);
+          const button = localStorage.getItem("btn");
+          document.getElementById(button).style.backgroundColor = '#02BC7D';
+          localStorage.setItem("cel", cel);
+          localStorage.setItem("koszt", koszt);
+
+        }
+      </script>
+      <button class="continue-btn">
+        <a href="podsumowanie.html">Przejdź dalej</a>
+      </button>
+      <footer>
+        <div class="footer-container">
+          <div class="address">
+            <p>POLmed ul.Grodzka 4</p>
+            <p>Kraków</p>
+            <p><span>tel.543 212 344</span></p>
+          </div>
+          <div class="social-media">
+            <h4>Znajdź nas:</h4>
+            <div class="social-media-img">
+              <a href="https://www.instagram.com/"
+                ><img src="../images/instagram.png" alt=""
+              /></a>
+              <a href="https://www.facebook.com/"
+                ><img src="../images/facebook.png" alt=""
+              /></a>
+              <a href="https://twitter.com/?lang=pl"
+                ><img src="../images/twitter.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="links">
+            <h4>Przydatne linki:</h4>
+            <a href="https://www.nfz.gov.pl/">NFZ-Narodowy Fundusz Zdrowia</a>
+            <a href="https://www.gov.pl/web/zdrowie">Ministerstwo Zdrowia</a>
+          </div>
+          <div class="chat">
+            <img src="../images/chat.png" />
+            <p>Chat now</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

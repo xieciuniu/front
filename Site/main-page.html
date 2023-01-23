@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+  </head>
+  <body>
+
+    <script>
+      function lekarz(a, imie) {
+        const lekarza = "lekarz"+a; 
+        const imiee = imie;
+        localStorage.setItem("lek", lekarza);
+        localStorage.setItem("imie", imiee);
+      }
+    </script>
+
+    <div class="nav-bar">
+      <nav>
+        <img id="logo" src="../images/logo1.jpg" alt="" srcset=""  />
+        <ul>
+          <li><a href="./main-page.html">Strona główna</a></li>
+          <li><a href="#">O nas</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Moje konto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main-container">
+      <header class="main-header">
+        <div class="header-text">
+          <p id="upper-header-text">Umów się na wizytę</p>
+          <hr
+            style="
+              width: 100%;
+              background: #f7d9d4cc;
+              height: 0.2rem;
+              border: 0px;
+            "
+          />
+          <p id="lower-header-text">Nasi lekarze:</p>
+        </div>
+      </header>
+      <div class="flex-content">
+        <div class="grid">
+          <div class="card-component">
+            <div class="img">
+              <img src="../images/lekarz1.jpg" alt="" />
+            </div>
+            <div class="text-content">
+              <p class="doctor-title">Pediatra</p>
+              <p class="doctor-name-1">lek. med. Marek Cichoń</p>
+              <div class="date">
+                <img class="date-icon" src="../images/red-x.png" alt="" />
+                <p>Brak wolnych terminów w tym tygodniu</p>
+              </div>
+              <button class="booking-btn" onclick="lekarz(1, 'lek. med. Marek Cichoń')">
+                <a href="calendar.html">Zobacz inne wolne terminy</a> 
+              </button>
+            </div>
+          </div>
+          <div class="card-component">
+            <div class="img">
+              <img src="../images/lekarz2.jpg" alt="" />
+            </div>
+            <div class="text-content">
+              <p class="doctor-title">lekarz rodzinny</p>
+              <p class="doctor-name-2" id="doctor-name-2">lek. med. Julia Duda</p>
+              <div class="date-fine">
+                <img
+                  class="date-icon-fine"
+                  src="../images/green-icon.jpg"
+                  alt=""
+                />
+                <p>Wolne terminy w tym tygodniu</p>
+              </div>
+              <button class="booking-btn" onclick="lekarz(2,'lek. med. Julia Duda')" >
+                <a href="calendar.html">Zarezerwuj</a>
+              </button>
+            </div>
+          </div>
+          <div class="card-component">
+            <div class="img">
+              <img src="../images/lekarz3.jpg" alt="" />
+            </div>
+            <div class="text-content">
+              <p class="doctor-title">Pediatra</p>
+              <p class="doctor-name-3">lek. med. Michał Klich</p>
+              <div class="date">
+                <img class="date-icon" src="../images/red-x.png" alt="" />
+                <p>Brak wolnych terminów w tym tygodniu</p>
+              </div>
+              <button class="booking-btn" onclick="lekarz(3, 'lek. med. Michał Klich')">
+                <a href="calendar.html"> Zobacz inne wolne terminy </a>
+              </button>
+            </div>
+          </div>
+          <div class="card-component">
+            <div class="img">
+              <img src="../images/lekarz4.jpg" alt="" />
+            </div>
+            <div class="text-content">
+              <p class="doctor-title">Lekarz rodzinny</p>
+              <p class="doctor-name-4">lek. med. Daria Bak</p>
+              <div class="date-fine">
+                <img
+                  class="date-icon-fine"
+                  src="../images/green-icon.jpg"
+                  alt=""
+                />
+                <p>Wolne terminy w tym tygodniu</p>
+              </div>
+              <button class="booking-btn" onclick="lekarz(4, 'lek. med. Daria Bak')">
+                <a href="calendar.html">Zarezerwuj</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-container">
+        <div class="info">
+          <img src="../images/list.png" alt="" />
+          <p>Wybierz swojego lekarza</p>
+        </div>
+        <img src="../images/white-arrow.png" alt="" />
+        <div class="info">
+          <img src="../images/calendar.png" alt="" />
+          <p>Wybierz dogodny dla siebie termin</p>
+        </div>
+        <img src="../images/white-arrow.png" />
+        <div class="info">
+          <img src="../images/stethoscope.png" alt="" />
+          <p>Przyjdź na wizytę</p>
+        </div>
+        <img src="../images/white-arrow.png" alt="" />
+        <div class="info">
+          <img src="../images/hand.png" alt="" />
+          <p>Zapłać na miejscu</p>
+        </div>
+      </div>
+      <div class="stats-container">
+        <h3>O nas:</h3>
+        <ul>
+          <li>
+            <img src="../images/checkmark.png" alt="" /> Dostęp do
+            wykwalifikowanej kadry medycznej
+          </li>
+          <li>
+            <img src="../images/checkmark.png" alt="" />Nowoczesna placówka w
+            centrum miasta
+          </li>
+          <li>
+            <img src="../images/checkmark.png" alt="" />Ponad 5,000 zadowolonych
+            pacjentów
+          </li>
+          <li>
+            <img src="../images/checkmark.png" alt="" />Możliwość anulowania
+            wizyty
+          </li>
+          <li>
+            <img src="../images/checkmark.png" alt="" />Sprawnie, szybko i bez
+            kolejek
+          </li>
+          <li>
+            <img src="../images/checkmark.png" alt="" />Bonusy dla stałych
+            pacjentów
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="address">
+            <p>POLmed ul.Grodzka 4</p>
+            <p>Kraków</p>
+            <p><span>tel.543 212 344</span></p>
+          </div>
+          <div class="social-media">
+            <h4>Znajdź nas:</h4>
+            <div class="social-media-img">
+              <a href="https://www.instagram.com/"
+                ><img src="../images/instagram.png" alt=""
+              /></a>
+              <a href="https://www.facebook.com/"
+                ><img src="../images/facebook.png" alt=""
+              /></a>
+              <a href="https://twitter.com/?lang=pl"
+                ><img src="../images/twitter.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="links">
+            <h4>Przydatne linki:</h4>
+            <a href="https://www.nfz.gov.pl/">NFZ-Narodowy Fundusz Zdrowia</a>
+            <a href="https://www.gov.pl/web/zdrowie">Ministerstwo Zdrowia</a>
+          </div>
+          <div class="chat">
+            <img src="../images/chat.png" />
+            <p>Chat now</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

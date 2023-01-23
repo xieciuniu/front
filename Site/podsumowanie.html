@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie</title>
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="stylesheet" href="./podsumowanie.css" type="text/css">
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <a href="./main-page.html"><img id="logo" src="../images/logo1.jpg" alt="" srcset="" /></a>            <ul>
+                <li><a href="./main-page.html">Strona główna</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Moje konto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-container">
+        <header>
+            <hr style="width:100%; background-color:#f66f56; height: 0.1rem; border: 0px;">
+            <h3>Podsumowanie</h3>
+        </header>
+        <div class="content-container">
+            <p>Twoja rezerwacja przebiegła pomyślnie!</p>
+            <h4>Szczegóły wizyty:</h4>
+            <table>
+                <tr>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="typ">data</td>
+                    <td class="dane">xx.xx.xxx-dzien</td>
+        
+                </tr>
+                <tr>
+                    <td class="typ">Godzina</td>
+                    <td class="dane">xx.xx</td>
+                </tr>
+                <tr>
+                    <td class="typ">Lekarz</td>
+                    <td class="dane" id="doctor-name"></td>
+                </tr> <tr>
+                    <td class="typ">Cel</td>
+                    <td class="dane" id="cel">tekst</td>
+                </tr>
+                <tr>
+                    <td class="typ">Cena</td>
+                    <td class="dane" id="cena">xxx</td>
+                </tr> <tr>
+                    <td class="typ">Miejsce</td>
+                    <td class="dane">Przychodnia POLmed ul.Grodzka 6, Kraków</td>
+                </tr>
+            </table>
+            <p>*Płatność tylko na miejscu</p>
+        </div>
+        
+        <script>
+          const imie = localStorage.getItem("imie");
+          document.getElementById('doctor-name').innerText = imie;
+          const cel = localStorage.getItem("cel");
+          document.getElementById('cel').innerText = cel;
+          const cena = localStorage.getItem("koszt");
+          document.getElementById('cena').innerText = cena;
+        </script>
+
+        <div class="end-container">
+            <p>Dziękujemy za dokonanie rezerwacji!</p>
+            <p>W razie braku możliwości przyjścia na wizytę prosimy o anulowanie rezerwacji co najmniej dwa dni przed</p>
+            <button>Anuluj</button>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="address">
+                    <p>POLmed ul.Grodzka 4</p>
+                    <p>Kraków</p>
+                    <p><span>tel.543 212 344</span></p>
+                </div>
+                <div class="social-media">
+                    <h4>Znajdź nas:</h4>
+                    <div class="social-media-img">
+                        <a href="https://www.instagram.com/"><img src="../images/instagram.png" alt=""></a>
+                        <a href="https://www.facebook.com/"><img src="../images/facebook.png" alt=""></a>
+                        <a href="https://twitter.com/?lang=pl"><img src="../images/twitter.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="links">
+                    <h4>Przydatne linki:</h4>
+                    <a href="https://www.nfz.gov.pl/">NFZ-Narodowy Fundusz Zdrowia</a>
+                    <a href="https://www.gov.pl/web/zdrowie">Ministerstwo Zdrowia</a>
+                </div>
+                <div class="chat">
+                    <img src="../images/chat.png" >
+                    <p>Chat now</p>
+                </div>
+            </div>
+        </footer>  
+        
+    </div>
+    
+</body>
+</html>
