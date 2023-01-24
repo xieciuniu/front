@@ -33,12 +33,12 @@
                 </tr>
                 <tr>
                     <td class="typ">data</td>
-                    <td class="dane">xx.xx.xxx-dzien</td>
+                    <td class="dane" id="data">.xxx-dzien</td>
         
                 </tr>
                 <tr>
                     <td class="typ">Godzina</td>
-                    <td class="dane">xx.xx</td>
+                    <td class="dane" id="godzina">xx.xx</td>
                 </tr>
                 <tr>
                     <td class="typ">Lekarz</td>
@@ -64,13 +64,22 @@
           const cel = localStorage.getItem("cel");
           document.getElementById('cel').innerText = cel;
           const cena = localStorage.getItem("koszt");
-          document.getElementById('cena').innerText = cena;
+          document.getElementById('cena').innerText = cena ;
+          const data = localStorage.getItem("data");
+          document.getElementById('data').innerText = data;
+          const czas = localStorage.getItem("czas");
+          document.getElementById('godzina').innerText = czas;
         </script>
 
         <div class="end-container">
             <p>Dziękujemy za dokonanie rezerwacji!</p>
             <p>W razie braku możliwości przyjścia na wizytę prosimy o anulowanie rezerwacji co najmniej dwa dni przed</p>
-            <button>Anuluj</button>
+            <a href="./main-page.html"><button onclick="wizyta()">Anuluj</button></a>
+            <script>
+                function wizyta(){
+                    alert("ANULOWANO WIZYTĘ");
+            }
+            </script>
         </div>
         <footer>
             <div class="footer-container">

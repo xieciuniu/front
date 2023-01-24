@@ -86,18 +86,19 @@
     text-transform: none;
     cursor: pointer;
     font-size: 14px;
+    background-color: white;
 }
 .continue-btn a{
     text-decoration: none;
     color: white;
 }
-.calendar-table-row td button:hover{
+/* .calendar-table-row td button:hover{
     background-color: #f7d9d4cc;
-}
+} */
 .calendar-table-row td button:active{
     background-color: #02BC7D;
-    border-color: #02BC7D;
-    color: white;
+    border-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 

@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./index.css" type="text/css" />
     <link rel="stylesheet" href="./calendar.css" type="text/css" />
     <link rel="stylesheet" href="./price-container.css" type="text/css" />
-    <link href="./mobiscroll.javascript.min.css" rel="stylesheet" />
-    <script src="./mobiscroll.javascript.min.js"></script>
-
   </head>
   <body>
     <div class="nav-bar">
@@ -47,76 +44,115 @@
       </div>
       <div class="calendar-container">
         <h3>Wybierz termin swojej wizyty</h3>
+        
         <div class="calendar">
           <div class="month">
-            <img src="../images/left-arrow.png" alt="" />
+            <img src="../images/left-arrow.png" alt="" onclick="lewo()" />
             <div class="calendar-text">
-              <strong>LISTOPAD</strong>
-              <strong>2022</strong>
+              <strong id="miesiac">STYCZEŃ</strong>
+              <strong>2023</strong>
             </div>
 
-            <img src="../images/right-arrow (2).png" alt="" />
+            <img src="../images/right-arrow (2).png" alt="" onclick="prawo()"/>
           </div>
           <table class="calendar-table">
             <tr class="calendar-table-row">
-              <th><span>Pn</span>22.11</th>
-              <th><span>Wt</span> 23.11</th>
-              <th><span>Śr</span> 24.11</th>
-              <th><span>Czw </span>25.11</th>
-              <th><span>Pt</span> 26.11</th>
+              <th>Pn <span id="pn">23.01</span></th>
+              <th>Wt <span id="wt">24.01</span></th>
+              <th>Śr <span id="sr">25.01</span></th>
+              <th>Czw <span id="czw">26.01</span></th>
+              <th>Pt <span id="pt">27.01</span></th>
+            </tr>
+
+            <script>
+              function lewo(){
+                const mies = "STYCZEŃ"
+                document.getElementById('miesiac').innerText = mies;
+                const a = "23.01"; document.getElementById('pn').innerText= a ;
+                const b = "24.01"; document.getElementById('wt').innerText= b ;
+                const c = "25.01"; document.getElementById('sr').innerText= c ;
+                const d = "26.01"; document.getElementById('czw').innerText= d ;
+                const e = "27.01"; document.getElementById('pt').innerText= e ;
+              }
+              function prawo(){
+                const miesi = "STYCZEŃ/LUTY";
+                document.getElementById('miesiac').innerText = miesi;
+                const a = "30.01"; document.getElementById('pn').innerText= a ;
+                const b = "31.01"; document.getElementById('wt').innerText= b ;
+                const c = "01.02"; document.getElementById('sr').innerText= c ;
+                const d = "02.02"; document.getElementById('czw').innerText= d ;
+                const e = "03.02"; document.getElementById('pt').innerText= e ;
+              }
+            </script>
+
+            <tr class="calendar-table-row">
+              <td><button id="23.018.00-9.00" onclick="cal('23.01','8.00-9.00','Poniedziałek')">8.00-9.00</button></td>
+              <td><button id="24.018.00-9.00" onclick="cal('24.01','8.00-9.00','Wtorek')">8.00-9.00</button></td>
+              <td><button id="25.018.00-9.00" onclick="cal('25.01','8.00-9.00','Środa')">8.00-9.00</button></td>
+              <td><button id="26.018.00-9.00" onclick="cal('26.01','8.00-9.00','Czwartek')">8.00-9.00</button></td>
+              <td><button id="27.018.00-9.00" onclick="cal('27.01','8.00-9.00','Piątek')">8.00-9.00</button></td>
             </tr>
             <tr class="calendar-table-row">
-              <td><button>8.00-9.00</button></td>
-              <td><button>8.00-9.00</button></td>
-              <td><button>8.00-9.00</button></td>
-              <td><button>8.00-9.00</button></td>
-              <td><button>8.00-9.00</button></td>
+              <td><button id="23.019.00-10.00" onclick="cal('23.01','9.00-10.00','Poniedziałek')">9.00-10.00</button></td>
+              <td><button id="24.019.00-10.00" onclick="cal('24.01','9.00-10.00','Wtorek')">9.00-10.00</button></td>
+              <td><button id="25.019.00-10.00" onclick="cal('25.01','9.00-10.00','Środa')">9.00-10.00</button></td>
+              <td><button id="26.019.00-10.00" onclick="cal('26.01','9.00-10.00','Czwartek')">9.00-10.00</button></td>
+              <td><button id="27.019.00-10.00" onclick="cal('27.01','9.00-10.00','Piątek')">9.00-10.00</button></td>
             </tr>
             <tr class="calendar-table-row">
-              <td><button>9.00-10.00</button></td>
-              <td><button>9.00-10.00</button></td>
-              <td><button>9.00-10.00</button></td>
-              <td><button>9.00-10.00</button></td>
-              <td><button>9.00-10.00</button></td>
+              <td><button id="23.0110.00-11.00" onclick="cal('23.01','10.00-11.00','Poniedziałek')">10.00-11.00</button></td>
+              <td><button id="24.0110.00-11.00" onclick="cal('24.01','10.00-11.00','Wtorek')">10.00-11.00</button></td>
+              <td><button id="25.0110.00-11.00" onclick="cal('25.01','10.00-11.00','Środa')">10.00-11.00</button></td>
+              <td><button id="26.0110.00-11.00" onclick="cal('26.01','10.00-11.00','Czwartek')">10.00-11.00</button></td>
+              <td><button id="27.0110.00-11.00" onclick="cal('27.01','10.00-11.00','Piątek')">10.00-11.00</button></td>
             </tr>
             <tr class="calendar-table-row">
-              <td><button>10.00-11.00</button></td>
-              <td><button>10.00-11.00</button></td>
-              <td><button>10.00-11.00</button></td>
-              <td><button>10.00-11.00</button></td>
-              <td><button>10.00-11.00</button></td>
+              <td><button id="23.0111.00-12.00" onclick="cal('23.01','11.00-12.00','Poniedziałek')">11.00-12.00</button></td>
+              <td><button id="24.0111.00-12.00" onclick="cal('24.01','11.00-12.00','Wtorek')">11.00-12.00</button></td>
+              <td><button id="25.0111.00-12.00" onclick="cal('25.01','11.00-12.00','Środa')">11.00-12.00</button></td>
+              <td><button id="26.0111.00-12.00" onclick="cal('26.01','11.00-12.00','Czwartek')">11.00-12.00</button></td>
+              <td><button id="27.0111.00-12.00" onclick="cal('27.01','11.00-12.00','Piątek')">11.00-12.00</button></td>
             </tr>
             <tr class="calendar-table-row">
-              <td><button>11.00-12.00</button></td>
-              <td><button>11.00-12.00</button></td>
-              <td><button>11.00-12.00</button></td>
-              <td><button>11.00-12.00</button></td>
-              <td><button>11.00-12.00</button></td>
+              <td><button id="23.0112.00-13.00" onclick="cal('23.01','12.00-13.00','Poniedziałek')">12.00-13.00</button></td>
+              <td><button id="24.0112.00-13.00" onclick="cal('24.01','12.00-13.00','Wtorek')">12.00-13.00</button></td>
+              <td><button id="25.0112.00-13.00" onclick="cal('25.01','12.00-13.00','Środa')">12.00-13.00</button></td>
+              <td><button id="26.0112.00-13.00" onclick="cal('26.01','12.00-13.00','Czwartek')">12.00-13.00</button></td>
+              <td><button id="27.0112.00-13.00" onclick="cal('27.01','12.00-13.00','Piątek')">12.00-13.00</button></td>
             </tr>
             <tr class="calendar-table-row">
-              <td><button>12.00-13.00</button></td>
-              <td><button>12.00-13.00</button></td>
-              <td><button>12.00-13.00</button></td>
-              <td><button>12.00-13.00</button></td>
-              <td><button>12.00-13.00</button></td>
+              <td><button id="23.0113.00-14.00" onclick="cal('23.01','13.00-14.00','Poniedziałek')">13.00-14.00</button></td>
+              <td><button id="24.0113.00-14.00" onclick="cal('24.01','13.00-14.00','Wtorek')">13.00-14.00</button></td>
+              <td><button id="25.0113.00-14.00" onclick="cal('25.01','13.00-14.00','Środa')">13.00-14.00</button></td>
+              <td><button id="26.0113.00-14.00" onclick="cal('26.01','13.00-14.00','Czwartek')">13.00-14.00</button></td>
+              <td><button id="27.0113.00-14.00" onclick="cal('27.01','13.00-14.00','Piątek')">13.00-14.00</button></td>
             </tr>
             <tr class="calendar-table-row">
-              <td><button>13.00-14.00</button></td>
-              <td><button>13.00-14.00</button></td>
-              <td><button>13.00-14.00</button></td>
-              <td><button>13.00-14.00</button></td>
-              <td><button>13.00-14.00</button></td>
-            </tr>
-            <tr class="calendar-table-row">
-              <td><button>14.00-15.00</button></td>
-              <td><button>14.00-15.00</button></td>
-              <td><button>14.00-15.00</button></td>
-              <td><button>14.00-15.00</button></td>
-              <td><button>14.00-15.00</button></td>
+              <td><button id="23.0114.00-15.00" onclick="cal('23.01','14.00-15.00','Poniedziałek')">14.00-15.00</button></td>
+              <td><button id="24.0114.00-15.00" onclick="cal('24.01','14.00-15.00','Wtorek')">14.00-15.00</button></td>
+              <td><button id="25.0114.00-15.00" onclick="cal('25.01','14.00-15.00','Środa')">14.00-15.00</button></td>
+              <td><button id="26.0114.00-15.00" onclick="cal('26.01','14.00-15.00','Czwartek')">14.00-15.00</button></td>
+              <td><button id="27.0114.00-15.00" onclick="cal('27.01','14.00-15.00','Piątek')">14.00-15.00</button></td>
             </tr>
           </table>
         </div>
       </div>
+      <p id="clean"></p>
+
+      <script>
+
+        function cal(data, czas, a){
+          const clean = localStorage.getItem("clean");
+          document.getElementById(clean).style.backgroundColor = 'white';
+          const wybierz = data + czas;
+          localStorage.setItem("clean", wybierz);
+          document.getElementById(wybierz).style.backgroundColor = '#02BC7D';
+          localStorage.setItem("data", data + ".2023" + " " + a);
+          localStorage.setItem("czas", czas);
+        }
+
+      </script>
+
       <div class="price-container">
         <h3>Wybierz cel swojej wizyty</h3>
         <table class="price-table" id="tabelatest">
@@ -145,14 +181,15 @@
             <td class="price-table-row-btn">50 zł<button id="btn5" onclick="price(5,'50 zł', 'Wypisanie recepty')">Wybierz</button></td>
           </tr>
         </table>
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <p id="4"></p>
       </div>
       <script>
         function price(numer, koszt, cel){
-          document.getElementById("btn1").style.backgroundColor = '#f66f56';
-          document.getElementById("btn2").style.backgroundColor = '#f66f56';
-          document.getElementById("btn3").style.backgroundColor = '#f66f56';
-          document.getElementById("btn4").style.backgroundColor = '#f66f56';
-          document.getElementById("btn5").style.backgroundColor = '#f66f56';
+          const zmiana = localStorage.getItem("btn")
+          document.getElementById(zmiana).style.backgroundColor = '#f66f56';
           const btn = "btn"+numer;
           localStorage.setItem("btn", btn);
           const button = localStorage.getItem("btn");
